@@ -1,261 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario de Adopción - Rescatando Animales Refugio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Elemento para los gradientes decorativos de fondo -->
   <div class="bg-deco"></div>
 
-  <!-- HEADER -->
+  <!-- ── HEADER ── -->
   <header class="header">
     <div class="header-inner">
-      <img src="logo.png" alt="Rescatando Animales Refugio" class="logo" />
+      <img src="logo.png" alt="Rescatando Animales Refugio" class="logo">
       <div class="header-text">
         <h1 class="title">Formulario de Adopción</h1>
-        <p class="subtitle">Rescatando Animales Refugio · San Pedro</p>
+        <p class="subtitle">Rescatando Animales Refugio</p>
       </div>
     </div>
     <div class="header-paws">🐾 🐾 🐾</div>
   </header>
 
-  <!-- AVISO -->
+  <!-- ── AVISO ── -->
   <div class="notice">
-    <span class="notice-icon">💜</span>
-    <p>
-      Tratamos de elegir la mejor vida para nuestros rescatados ya que muchos han sufrido maltrato y no queremos que vuelva a pasar.
-      <strong> Si no están respondidas todas las preguntas, no se dará una devolución.</strong>
-    </p>
+    <span class="notice-icon">⚠️</span>
+    <p>Tratamos de elegir la mejor vida para nuestros rescatados ya que muchos han sufrido maltrato y no queremos que vuelva a pasar. Si no están respondidas todas las respuestas no se dará una devolución.</p>
   </div>
 
-  <!-- FORMULARIO -->
-  <form class="form-container" action="#" method="post" enctype="multipart/form-data">
-
-    <!-- SECCIÓN 1: DATOS PERSONALES -->
-    <div class="section">
-      <div class="section-header">
-        <span class="section-icon">👤</span>
-        <h2>Datos Personales</h2>
-      </div>
-
-      <div class="field">
-        <label>Nombre y Apellido <span class="required">*</span></label>
-        <input type="text" name="nombre_apellido" required placeholder="Tu nombre completo" />
-      </div>
-
-      <div class="field">
-        <label>¿Sos de San Pedro? <span class="required">*</span></label>
-        <div class="radio-group">
-          <label class="radio-label"><input type="radio" name="es_san_pedro" value="si" required /> Sí</label>
-          <label class="radio-label"><input type="radio" name="es_san_pedro" value="no" /> No</label>
+  <!-- ── FORMULARIO ── -->
+  <main class="form-container">
+    <form action="#" method="POST" enctype="multipart/form-data">
+      
+      <!-- SECCIÓN 1: Datos Personales -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-icon">👤</span>
+          <h2>Datos Personales</h2>
         </div>
-      </div>
 
-      <div class="grid-two">
         <div class="field">
-          <label>¿De qué trabajás? <span class="required">*</span></label>
-          <input type="text" name="trabajo" required placeholder="Tu ocupación" />
+          <label for="nombre">Nombre y Apellido <span class="required">*</span></label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
         </div>
+
         <div class="field">
-          <label>Domicilio (dirección) <span class="required">*</span></label>
-          <input type="text" name="domicilio" required placeholder="Tu dirección" />
+          <label>¿Sos de San Pedro? <span class="required">*</span></label>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="san_pedro" value="si" required> Sí</label>
+            <label class="radio-label"><input type="radio" name="san_pedro" value="no" required> No</label>
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label>¿Vivís con más personas? Contanos con quiénes y sus edades (incluida la tuya) <span class="required">*</span></label>
-        <textarea name="convivientes" required rows="3" placeholder="Ejemplo: Vivo con mi pareja (30) y mi hijo (8). Yo tengo 32 años."></textarea>
-      </div>
-    </div>
-
-    <!-- SECCIÓN 2: VIVIENDA -->
-    <div class="section">
-      <div class="section-header">
-        <span class="section-icon">🏠</span>
-        <h2>Sobre tu Vivienda</h2>
-      </div>
-
-      <div class="field">
-        <label>¿Vivís en casa propia o alquiler? <span class="required">*</span></label>
-        <div class="radio-group">
-          <label class="radio-label"><input type="radio" name="vivienda" value="propia" required /> Casa propia</label>
-          <label class="radio-label"><input type="radio" name="vivienda" value="alquiler" /> Alquiler</label>
-          <label class="radio-label"><input type="radio" name="vivienda" value="familia" /> Con familia</label>
-          <label class="radio-label"><input type="radio" name="vivienda" value="otro" /> Otro</label>
+        <div class="field">
+          <label for="trabajo_domicilio">Contanos de qué trabajás y cuál es tu domicilio (dirección) <span class="required">*</span></label>
+          <textarea id="trabajo_domicilio" name="trabajo_domicilio" required placeholder="Ocupación, horarios laborales y dirección completa"></textarea>
         </div>
-      </div>
 
-      <div class="field conditional-field">
-        <div class="conditional-badge">Solo para quienes alquilan</div>
-        <label>En caso de mudarte, ¿podés llevarte a tu mascota?</label>
-        <div class="radio-group">
-          <label class="radio-label"><input type="radio" name="puede_llevar" value="si" /> Sí</label>
-          <label class="radio-label"><input type="radio" name="puede_llevar" value="no" /> No</label>
-          <label class="radio-label"><input type="radio" name="puede_llevar" value="no_aplica" /> No aplica</label>
+        <div class="field">
+          <label for="convivientes">¿Vivís con más personas? Contanos con quiénes y sus edades <span class="required">*</span></label>
+          <p class="hint">Incluí tu propia edad en la respuesta.</p>
+          <textarea id="convivientes" name="convivientes" required placeholder="Ej: Yo (28 años), mi mamá (54 años)"></textarea>
         </div>
-        <p class="hint">Si no alquilás, no es necesario responder esta pregunta.</p>
-      </div>
 
-      <div class="field">
-        <label>¿Tenés el espacio necesario para otra mascota? <span class="required">*</span></label>
-        <div class="radio-group">
-          <label class="radio-label"><input type="radio" name="tiene_espacio" value="si" required /> Sí</label>
-          <label class="radio-label"><input type="radio" name="tiene_espacio" value="no" /> No</label>
-          <label class="radio-label"><input type="radio" name="tiene_espacio" value="trabajando" /> Estoy trabajando en eso</label>
+        <div class="field">
+          <label for="red_social">¿Podrías proporcionarnos alguna red social personal tuya? <span class="required">*</span></label>
+          <input type="text" id="red_social" name="red_social" required placeholder="Enlace a tu Instagram, Facebook o perfil público">
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- SECCIÓN 3: ANIMALES -->
-    <div class="section">
-      <div class="section-header">
-        <span class="section-icon">🐾</span>
-        <h2>Tus Animales</h2>
-      </div>
-
-      <div class="field">
-        <label>¿Tenés o tuviste otros animales? <span class="required">*</span></label>
-        <div class="radio-group">
-          <label class="radio-label"><input type="radio" name="tuvo_animales" value="tengo" required /> Sí, tengo actualmente</label>
-          <label class="radio-label"><input type="radio" name="tuvo_animales" value="tuve" /> Sí, tuve antes</label>
-          <label class="radio-label"><input type="radio" name="tuvo_animales" value="no" /> No</label>
+      <!-- SECCIÓN 2: Entorno y Vivienda -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-icon">🏡</span>
+          <h2>Tu Hogar y Entorno</h2>
         </div>
-      </div>
 
-      <div class="field">
-        <label>¿Tuvieron vacunas o fueron castrados? <span class="required">*</span></label>
-        <div class="radio-group">
-          <label class="radio-label"><input type="radio" name="vacunas" value="ambas" required /> Sí, ambas</label>
-          <label class="radio-label"><input type="radio" name="vacunas" value="vacunas" /> Solo vacunas</label>
-          <label class="radio-label"><input type="radio" name="vacunas" value="castracion" /> Solo castración</label>
-          <label class="radio-label"><input type="radio" name="vacunas" value="no" /> No</label>
-          <label class="radio-label"><input type="radio" name="vacunas" value="no_aplica" /> No aplica</label>
+        <div class="field">
+          <label>¿Vivís en casa propia o alquiler? <span class="required">*</span></label>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="tipo_vivienda" value="propia" required> Casa propia</label>
+            <label class="radio-label"><input type="radio" name="tipo_vivienda" value="alquiler" required> Alquiler</label>
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label>Nombre del veterinario al que asistís con tus animales <span class="required">*</span></label>
-        <input type="text" name="veterinario" required placeholder="Nombre o clínica veterinaria" />
-      </div>
+        <!-- Campo Condicional Estilizado -->
+        <div class="field conditional-field">
+          <span class="conditional-badge">Solo inquilinos</span>
+          <label for="mudanza_alquiler">En caso de vivir en alquiler, ¿si te mudás podés llevarte a tu mascota?</label>
+          <p class="hint">Si no alquilás, no es necesario responder.</p>
+          <textarea id="mudanza_alquiler" name="mudanza_alquiler" placeholder="Explicanos brevemente las condiciones de tu contrato respecto a animales"></textarea>
+        </div>
 
-      <div class="grid-two">
+        <div class="grid-two">
+          <div class="field">
+            <label>¿Tenés el espacio necesario? <span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="espacio" value="si" required> Sí</label>
+              <label class="radio-label"><input type="radio" name="espacio" value="no" required> No</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>¿Hacerte cargo de los gastos? <span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="gastos" value="si" required> Sí</label>
+              <label class="radio-label"><input type="radio" name="gastos" value="no" required> No</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="tiempo_solo">¿Tu mascota se quedará sola en casa? ¿Cuánto tiempo aproximado? <span class="required">*</span></label>
+          <input type="text" id="tiempo_solo" name="tiempo_solo" required placeholder="Ej: Sí, unas 5 horas diarias por trabajo">
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: Relación con otros Animales -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-icon">🐾</span>
+          <h2>Historial de Mascotas</h2>
+        </div>
+
+        <div class="field">
+          <label>¿Tenés o tuviste otros animales? <span class="required">*</span></label>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="otros_animales" value="si" required> Sí</label>
+            <label class="radio-label"><input type="radio" name="otros_animales" value="no" required> No</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>¿Tuvieron vacunas o fueron castrados?</label>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="salud_animal" value="si"> Sí, ambas</label>
+            <label class="radio-label"><input type="radio" name="salud_animal" value="solo_vacunas"> Solo vacunas</label>
+            <label class="radio-label"><input type="radio" name="salud_animal" value="solo_castrados"> Solo castración</label>
+            <label class="radio-label"><input type="radio" name="salud_animal" value="no"> Ninguna</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="veterinario">Nombre del veterinario al que asistís con tus animales</label>
+          <input type="text" id="veterinario" name="veterinario" placeholder="Nombre del profesional o clínica veterinaria">
+        </div>
+
         <div class="field">
           <label>¿Tus mascotas se llevan bien con animales nuevos? <span class="required">*</span></label>
           <div class="radio-group">
-            <label class="radio-label"><input type="radio" name="mascotas_llevan" value="si" required /> Sí</label>
-            <label class="radio-label"><input type="radio" name="mascotas_llevan" value="no" /> No</label>
-            <label class="radio-label"><input type="radio" name="mascotas_llevan" value="aveces" /> A veces</label>
-            <label class="radio-label"><input type="radio" name="mascotas_llevan" value="no_tengo" /> No tengo</label>
+            <label class="radio-label"><input type="radio" name="convivencia" value="si" required> Sí</label>
+            <label class="radio-label"><input type="radio" name="convivencia" value="no" required> No</label>
+            <label class="radio-label"><input type="radio" name="convivencia" value="no_tengo" required> No tengo animales actuales</label>
           </div>
         </div>
+      </section>
+
+      <!-- SECCIÓN 4: Referencias y Verificación -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-icon">🔗</span>
+          <h2>Referencias y Archivos</h2>
+        </div>
+
         <div class="field">
-          <label>¿Tu mascota se quedará sola? ¿Cuánto tiempo aproximado? <span class="required">*</span></label>
-          <input type="text" name="soledad" required placeholder="Ejemplo: 4 horas por día" />
+          <label for="referencias">¿A quién considerás que podemos pedirle referencias tuyas? <span class="required">*</span></label>
+          <textarea id="referencias" name="referencias" required placeholder="Ej: Veterinarios de confianza, otros refugios, rescatistas locales, etc."></textarea>
         </div>
-      </div>
-    </div>
 
-    <!-- SECCIÓN 4: ECONOMÍA -->
-    <div class="section">
-      <div class="section-header">
-        <span class="section-icon">💰</span>
-        <h2>Responsabilidad Económica</h2>
-      </div>
-
-      <div class="field">
-        <label>¿Sos capaz de hacerte cargo de los gastos de la nueva mascota? <span class="required">*</span></label>
-        <p class="hint">Incluye alimento, veterinario, vacunas, antiparasitarios, etc.</p>
-        <div class="radio-group">
-          <label class="radio-label"><input type="radio" name="puede_afrontar" value="si" required /> Sí</label>
-          <label class="radio-label"><input type="radio" name="puede_afrontar" value="con_ayuda" /> Con ayuda familiar</label>
-          <label class="radio-label"><input type="radio" name="puede_afrontar" value="no_seguro" /> No estoy seguro/a</label>
+        <!-- Área de Subida Estilizada por tu CSS -->
+        <div class="field">
+          <label>Fotos o videos de tus mascotas y el lugar donde están</label>
+          <label class="upload-area" for="fotos_videos">
+            <input type="file" id="fotos_videos" name="fotos_videos[]" multiple accept="image/*,video/*">
+            <span class="upload-icon">📸</span>
+            <span class="upload-title">Hacé clic acá para subir tus archivos</span>
+            <span class="upload-sub">Formatos permitidos: Imágenes y Videos (Podés elegir varios)</span>
+          </label>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- SECCIÓN 5: REFERENCIAS -->
-    <div class="section">
-      <div class="section-header">
-        <span class="section-icon">📋</span>
-        <h2>Referencias y Contacto</h2>
+      <!-- BOTÓN ENVIAR -->
+      <div class="submit-area">
+        <p class="submit-note">Por favor, revisá que todas las preguntas obligatorias (*) estén completas.</p>
+        <button type="submit" class="submit-btn">Enviar Formulario de Adopción</button>
       </div>
 
-      <div class="field">
-        <label>¿A quién considerás que podemos pedirle referencias tuyas? <span class="required">*</span></label>
-        <p class="hint">Por ejemplo: veterinarios, refugios, vecinos, conocidos, etc.</p>
-        <textarea name="referencias" required rows="3" placeholder="Nombre y forma de contacto"></textarea>
-      </div>
+    </form>
+  </main>
 
-      <div class="field">
-        <label>¿Podrías proporcionarnos alguna red social personal tuya?</label>
-        <input type="text" name="red_social" placeholder="Instagram, Facebook u otra" />
-      </div>
-    </div>
-
-    <!-- SECCIÓN 6: ARCHIVOS -->
-    <div class="section">
-      <div class="section-header">
-        <span class="section-icon">📷</span>
-        <h2>Fotos y Videos</h2>
-      </div>
-
-      <div class="field">
-        <label>Si es posible, adjuntá fotos o videos de tus mascotas y el lugar donde están</label>
-        <label class="upload-area" for="archivos">
-          <span class="upload-icon">📎</span>
-          <span class="upload-title">Clic para adjuntar archivos</span>
-          <span class="upload-sub">Fotos o videos de tus mascotas y el espacio del hogar</span>
-          <input type="file" id="archivos" name="archivos" multiple accept="image/*,video/*" />
-        </label>
-        <div id="file-list" class="file-list"></div>
-      </div>
-    </div>
-
-    <!-- ENVIAR -->
-    <div class="submit-area">
-      <p class="submit-note">🐾 Revisá que todas las preguntas obligatorias estén respondidas antes de enviar.</p>
-      <button type="submit" class="submit-btn">Enviar Formulario 🐾</button>
-    </div>
-
-  </form>
-
-  <!-- FOOTER -->
+  <!-- ── FOOTER ── -->
   <footer class="footer">
-    <img src="logo.png" alt="Rescatando Animales Refugio" class="footer-logo" />
+    <img src="logo.png" alt="Logo Refugio" class="footer-logo">
     <p class="footer-name">Rescatando Animales Refugio</p>
-    <p class="footer-sub">San Pedro, Buenos Aires · Todos los rescatados merecen una segunda oportunidad 💜</p>
+    <p class="footer-sub">San Pedro, Buenos Aires, Argentina</p>
   </footer>
-
-  <script>
-    // Mostrar nombres de archivos seleccionados
-    document.getElementById('archivos').addEventListener('change', function () {
-      const list = document.getElementById('file-list');
-      list.innerHTML = '';
-      Array.from(this.files).forEach(function (file) {
-        const item = document.createElement('div');
-        item.className = 'file-item';
-        item.textContent = '📄 ' + file.name;
-        list.appendChild(item);
-      });
-    });
-
-    // Estilo visual para radio buttons seleccionados
-    document.querySelectorAll('.radio-label input[type="radio"]').forEach(function (input) {
-      input.addEventListener('change', function () {
-        document.querySelectorAll('input[name="' + this.name + '"]').forEach(function (r) {
-          r.closest('.radio-label').classList.remove('checked');
-        });
-        this.closest('.radio-label').classList.add('checked');
-      });
-    });
-  </script>
-
-</body>
-</html>
 
 </body>
 </html>

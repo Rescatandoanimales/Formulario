@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Adopción Responsable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Formulario de Adopción Responsable</h2>
+        <p class="intro-text">Tratamos de elegir la mejor vida para nuestros rescatados ya que muchos han sufrido maltrato y no queremos que vuelva a pasar. Por favor, respondé con total honestidad.</p>
+        <p class="warning-text">⚠️ Si no están respondidas todas las preguntas, no se dará una devolución.</p>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+            
+            <!-- Datos Personales -->
+            <div class="form-group">
+                <label for="nombre">Nombre y Apellido *</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+            </div>
+
+            <div class="form-group">
+                <label>¿Sos de San Pedro? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="san_pedro" value="si" required> Sí</label>
+                    <label><input type="radio" name="san_pedro" value="no" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="trabajo_domicilio">Contanos de qué trabajás y cuál es tu domicilio (dirección) *</label>
+                <textarea id="trabajo_domicilio" name="trabajo_domicilio" rows="3" required placeholder="Ocupación y dirección exacta"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="convivientes">¿Vivís con más personas? Contanos con quiénes y sus edades (incluyendo la tuya) *</label>
+                <textarea id="convivientes" name="convivientes" rows="3" required placeholder="Ej: Yo (35), mi pareja (32) e hijo (8)"></textarea>
+            </div>
+
+            <!-- Vivienda -->
+            <div class="form-group">
+                <label>¿Vivís en casa propia o alquiler? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="tipo_vivienda" value="propia" required> Casa propia</label>
+                    <label><input type="radio" name="tipo_vivienda" value="alquiler" required> Alquiler</label>
+                </div>
+            </div>
+
+            <div class="form-group-conditional">
+                <label for="mudanza_alquiler">En caso de vivir en alquiler, ¿si te mudás podés llevarte a tu mascota?</label>
+                <textarea id="mudanza_alquiler" name="mudanza_alquiler" rows="2" placeholder="Si no alquilás, no es necesario responder"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>¿Tenés el espacio necesario para otra mascota? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="espacio" value="si" required> Sí</label>
+                    <label><input type="radio" name="espacio" value="no" required> No</label>
+                </div>
+            </div>
+
+            <!-- Mascotas actuales/anteriores -->
+            <div class="form-group">
+                <label>¿Tenés o tuviste otros animales? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="otros_animales" value="si" required> Sí</label>
+                    <label><input type="radio" name="otros_animales" value="no" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>¿Tuvieron vacunas o fueron castrados?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="vacunas_castracion" value="si"> Sí, ambas</label>
+                    <label><input type="radio" name="vacunas_castracion" value="solo_vacunas"> Solo vacunas</label>
+                    <label><input type="radio" name="vacunas_castracion" value="solo_castrados"> Solo castrados</label>
+                    <label><input type="radio" name="vacunas_castracion" value="no"> Ninguna</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="veterinario">Nombre del veterinario al que asistís con tus animales</label>
+                <input type="text" id="veterinario" name="veterinario" placeholder="Nombre de la veterinaria o profesional">
+            </div>
+
+            <div class="form-group">
+                <label>¿Tus mascotas se llevan bien con animales nuevos? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="convivencia_animal" value="si" required> Sí</label>
+                    <label><input type="radio" name="convivencia_animal" value="no" required> No</label>
+                    <label><input type="radio" name="convivencia_animal" value="no_tengo" required> No tengo mascotas actuales</label>
+                </div>
+            </div>
+
+            <!-- Cuidado y rutina -->
+            <div class="form-group">
+                <label for="tiempo_solo">¿Tu mascota se quedará sola en casa? ¿Cuánto tiempo aproximado? *</label>
+                <input type="text" id="tiempo_solo" name="tiempo_solo" required placeholder="Ej: Sí, unas 4 horas por trabajo">
+            </div>
+
+            <div class="form-group">
+                <label>¿Sos capaz de hacerte cargo de los gastos de la nueva mascota? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gastos" value="si" required> Sí</label>
+                    <label><input type="radio" name="gastos" value="no" required> No</label>
+                </div>
+            </div>
+
+            <!-- Referencias y multimedia -->
+            <div class="form-group">
+                <label for="referencias">¿A quién considerás que podemos pedirle referencias tuyas? *</label>
+                <textarea id="referencias" name="referencias" rows="2" required placeholder="Por ejemplo: veterinarios, refugios, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="red_social">¿Podrías proporcionarnos alguna red social personal tuya? *</label>
+                <input type="text" id="red_social" name="red_social" required placeholder="Link a tu perfil de Instagram, Facebook, etc.">
+            </div>
+
+            <div class="form-group">
+                <label for="fotos_videos">Si es posible, adjuntá fotos o videos de tus mascotas y el lugar donde están</label>
+                <input type="file" id="fotos_videos" name="fotos_videos[]" multiple accept="image/*,video/*">
+                <span class="file-help">Podés seleccionar múltiples archivos de imagen o video.</span>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar Formulario de Adopción</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

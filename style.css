@@ -1,4 +1,3 @@
-/* Importar una tipografía moderna y amigable */
 @import url('https://googleapis.com');
 
 * {
@@ -8,9 +7,9 @@
 }
 
 body {
-    background: linear-gradient(135deg, #fdf6ec 0%, #f4eade 100%);
+    background: linear-gradient(135deg, #FFFCE0 0%, #F5F1C4 100%); /* Amarillo suave del logo */
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #4a3e3d;
+    color: #1A1A1A;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
@@ -18,72 +17,71 @@ body {
     min-height: 100vh;
 }
 
-/* Contenedor Principal estilo Tarjeta Flotante */
+/* Contenedor tipo Tarjeta de Marca */
 .form-container {
     background-color: #ffffff;
-    max-width: 700px;
+    max-width: 680px;
     width: 100%;
-    padding: 45px 40px;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(139, 119, 103, 0.12);
-    position: relative;
-    overflow: hidden;
+    padding: 40px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(116, 68, 126, 0.15); /* Sombra sutil violeta */
+    border: 4px solid #DF99EC; /* Borde violeta como el logo */
 }
 
-/* Decoración superior juguetona con huellitas */
-.form-container::before {
-    content: "🐾 🐾";
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    font-size: 24px;
-    opacity: 0.2;
+/* Identidad Visual del Encabezado */
+.brand-header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-/* Títulos con tipografía redondeada */
+.brand-logo {
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
 h2 {
     font-family: 'Fredoka', sans-serif;
-    color: #8c6239;
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 15px;
-    font-weight: 600;
+    color: #AF43C4; /* Violeta fuerte del texto del logo */
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .intro-text {
     font-size: 15px;
     line-height: 1.6;
-    color: #706261;
-    margin-bottom: 20px;
+    color: #4A4A4A;
+    margin-bottom: 15px;
     text-align: center;
-    background: #fdfaf6;
+    background: #FFFEEA;
     padding: 15px;
-    border-radius: 12px;
-    border-left: 4px solid #d4a373;
+    border-radius: 16px;
+    border: 2px solid #FFF59D;
 }
 
 .warning-text {
     font-size: 14px;
     font-weight: 700;
-    color: #c94c4c;
-    background-color: #fff0f0;
+    color: #D32F2F;
+    background-color: #FFEBEE;
     padding: 12px;
     border-radius: 12px;
     margin-bottom: 35px;
     text-align: center;
-    border: 1px dashed #ffa3a3;
+    border: 1px solid #FFCDD2;
 }
 
-/* Estructura de bloques del formulario */
+/* Estructura de las Preguntas */
 .form-group, .form-group-conditional {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
 }
 
 .form-group-conditional {
-    background-color: #fcf8f2;
+    background-color: #FBF7FC;
     padding: 20px;
-    border-radius: 16px;
-    border: 1px dashed #e6ccb2;
+    border-radius: 18px;
+    border: 2px dashed #DF99EC;
 }
 
 label {
@@ -91,128 +89,129 @@ label {
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 15px;
-    color: #5c4d4c;
-    letter-spacing: -0.2px;
+    color: #2E2E2E;
 }
 
-/* Diseño de los campos de Texto y Áreas de respuesta */
+/* Campos de entrada estilizados */
 input[type="text"],
 textarea {
     width: 100%;
     padding: 14px 18px;
-    border: 2px solid #ebd9c8;
+    border: 2px solid #E0E0E0;
     border-radius: 14px;
     font-size: 15px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #4a3e3d;
-    background-color: #faf6f0;
-    transition: all 0.3s ease;
+    color: #1A1A1A;
+    background-color: #FAFAFA;
+    transition: all 0.25s ease;
 }
 
 input[type="text"]:focus,
 textarea:focus {
     outline: none;
-    border-color: #d4a373;
+    border-color: #AF43C4; /* Foco violeta */
     background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(212, 163, 115, 0.15);
+    box-shadow: 0 0 0 4px rgba(175, 67, 196, 0.15);
 }
 
 textarea {
     resize: vertical;
-    min-height: 90px;
 }
 
-/* Rediseño de Botones de Opción (Radio Buttons modernos) */
+/* Botones de opción circulares interactivos */
 .radio-group {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .radio-group label {
     font-weight: 600;
     font-size: 14px;
-    background-color: #f4eae1;
+    background-color: #FFFDE6; /* Fondo amarillo muy clarito */
     padding: 10px 18px;
-    border-radius: 20px;
+    border-radius: 25px;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: all 0.2s ease;
-    border: 1px solid transparent;
+    border: 2px solid #FFF9A6;
 }
 
 .radio-group label:hover {
-    background-color: #ebd9c8;
+    background-color: #FFF9A6;
+    border-color: #DF99EC;
 }
 
-/* Cambia el color del círculo del radio button natively */
 input[type="radio"] {
-    accent-color: #b07d62;
+    accent-color: #AF43C4; /* Círculo violeta nativo */
     width: 18px;
     height: 18px;
     cursor: pointer;
 }
 
-/* Subida de archivos estilizada */
+/* Subida de Archivos del Refugio */
 input[type="file"] {
-    background: #ffffff;
-    border: 2px dashed #d4a373;
+    background: #FAFAFA;
+    border: 2px dashed #DF99EC;
     padding: 15px;
     border-radius: 14px;
+    width: 100%;
     cursor: pointer;
 }
 
 .file-help {
     display: block;
     font-size: 12px;
-    color: #8c7a78;
+    color: #666;
     margin-top: 6px;
     font-style: italic;
 }
 
-/* Botón de Enviar Impactante y Hermoso */
+/* Botón de Enviar Temático Llamativo */
 .submit-btn {
     display: block;
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #d4a373 0%, #b07d62 100%);
+    background: #AF43C4; /* Violeta principal */
     color: white;
     border: none;
-    border-radius: 14px;
+    border-radius: 16px;
     font-family: 'Fredoka', sans-serif;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(176, 125, 98, 0.3);
+    box-shadow: 0 6px 15px rgba(175, 67, 196, 0.3);
     transition: all 0.3s ease;
-    margin-top: 40px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    margin-top: 35px;
 }
 
 .submit-btn:hover {
+    background: #9032A3;
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(176, 125, 98, 0.4);
-    background: linear-gradient(135deg, #e3b587 0%, #be8b6f 100%);
+    box-shadow: 0 10px 20px rgba(175, 67, 196, 0.4);
 }
 
 .submit-btn:active {
     transform: translateY(1px);
 }
 
-/* Optimización para Dispositivos Móviles */
+/* Responsive */
 @media (max-width: 600px) {
     body {
         padding: 15px 10px;
     }
     .form-container {
-        padding: 30px 20px;
-        border-radius: 18px;
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+    .brand-logo {
+        max-width: 130px;
     }
     h2 {
-        font-size: 26px;
+        font-size: 22px;
     }
     .radio-group {
         flex-direction: column;

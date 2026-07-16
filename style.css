@@ -8,7 +8,6 @@
 
 :root {
   --yellow: #F9E84A;
-  --yellow-dark: #E8D235;
   --purple: #C452B8;
   --purple-dark: #9E3E96;
   --purple-light: #EDD6EB;
@@ -21,11 +20,9 @@ body {
   background-color: var(--cream);
   color: var(--ink);
   min-height: 100vh;
-  position: relative;
   overflow-x: hidden;
 }
 
-/* Fondo decorativo */
 .bg-deco {
   position: fixed;
   inset: 0;
@@ -160,7 +157,7 @@ body {
   margin-bottom: 20px;
 }
 
-.field label:first-child {
+.field > label:first-child {
   display: block;
   font-weight: 700;
   font-size: 14px;
@@ -242,7 +239,8 @@ textarea {
 }
 
 .radio-label input[type="radio"] {
-  width: auto;
+  width: 14px;
+  height: 14px;
   accent-color: #C452B8;
 }
 
@@ -357,7 +355,6 @@ textarea {
   cursor: pointer;
   box-shadow: 0 6px 24px rgba(196,82,184,0.35);
   transition: all 0.2s ease;
-  letter-spacing: 0.3px;
 }
 
 .submit-btn:hover {

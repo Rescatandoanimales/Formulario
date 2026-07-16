@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Adopción Responsable</title>
+    <title>Formulario de Adopción - Rescatando Animales Refugio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="form-container">
-        <h2>Formulario de Adopción Responsable</h2>
+        <!-- Encabezado con el Logo del Refugio -->
+        <div class="brand-header">
+            <img src="logo.png" alt="Rescatando Animales Refugio Logo" class="brand-logo">
+            <h2>Formulario de Adopción Responsable</h2>
+        </div>
+
         <p class="intro-text">Tratamos de elegir la mejor vida para nuestros rescatados ya que muchos han sufrido maltrato y no queremos que vuelva a pasar. Por favor, respondé con total honestidad.</p>
         <p class="warning-text">⚠️ Si no están respondidas todas las preguntas, no se dará una devolución.</p>
 
@@ -116,10 +121,10 @@
 
             <div class="form-group">
                 <label for="red_social">¿Podrías proporcionarnos alguna red social personal tuya? *</label>
-                <input type="text" id="red_social" name="red_social" required placeholder="Link a tu perfil de Instagram, Facebook, etc.">
+                <input type="text" id="red_social" name="red_social" required placeholder="Link a tu perfil de Instagram o Facebook">
             </div>
 
-            <div class="form-group">
+            <div class="form-group font-upload">
                 <label for="fotos_videos">Si es posible, adjuntá fotos o videos de tus mascotas y el lugar donde están</label>
                 <input type="file" id="fotos_videos" name="fotos_videos[]" multiple accept="image/*,video/*">
                 <span class="file-help">Podés seleccionar múltiples archivos de imagen o video.</span>
